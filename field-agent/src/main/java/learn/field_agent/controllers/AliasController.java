@@ -34,7 +34,7 @@ public class AliasController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> add(@RequestBody Alias alias) {
+    public ResponseEntity<Object> add(@RequestBody(required = false) Alias alias) {
         Result<Alias> result = service.add(alias);
         if (result.isSuccess()) {
             return new ResponseEntity<>(result.getPayload(), HttpStatus.CREATED);

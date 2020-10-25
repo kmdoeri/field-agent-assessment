@@ -35,7 +35,7 @@ public class AgencyController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> add(@RequestBody Agency agency) {
+    public ResponseEntity<Object> add(@RequestBody(required = false) Agency agency) {
         Result<Agency> result = agencyService.add(agency);
         if (result.isSuccess()) {
             return new ResponseEntity<>(result.getPayload(), HttpStatus.CREATED);

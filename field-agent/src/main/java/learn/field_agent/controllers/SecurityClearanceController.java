@@ -33,7 +33,7 @@ public class SecurityClearanceController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> add(@RequestBody SecurityClearance securityClearance) {
+    public ResponseEntity<Object> add(@RequestBody(required = false) SecurityClearance securityClearance) {
         Result<SecurityClearance> result = service.add(securityClearance);
         if (result.isSuccess()) {
             return new ResponseEntity<>(result.getPayload(), HttpStatus.CREATED);
