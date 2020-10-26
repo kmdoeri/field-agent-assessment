@@ -158,16 +158,16 @@ class AliasServiceTest {
         assertEquals(ResultType.SUCCESS, result.getType());
     }
 
-    Agent makeAgent() {
-        Agent agent = new Agent();
-        agent.setAgentId(1);
-        agent.setFirstName("Kristin");
-        agent.setMiddleName("M.");
-        agent.setLastName("Doering");
-        agent.setDob(LocalDate.of(1996, 3, 24));
-        agent.setHeightInInches(66);
-        return agent;
-    }
+//    Agent makeAgent() {
+//        Agent agent = new Agent();
+//        agent.setAgentId(1);
+//        agent.setFirstName("Kristin");
+//        agent.setMiddleName("M.");
+//        agent.setLastName("Doering");
+//        agent.setDob(LocalDate.of(1996, 3, 24));
+//        agent.setHeightInInches(66);
+//        return agent;
+//    }
 
     Alias makeAliasIn() {
         Alias alias = new Alias();

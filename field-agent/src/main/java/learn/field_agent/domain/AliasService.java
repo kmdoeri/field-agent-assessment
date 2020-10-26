@@ -79,31 +79,6 @@ public class AliasService {
             result.addMessage("Alias name is required.", ResultType.INVALID);
         }
 
-//        for (Alias a : aliasRepository.findAll()) {
-//            if (a.getAliasId() == alias.getAliasId()) {
-//                result.addMessage("Alias id must be unique.", ResultType.INVALID);
-//                break;
-//            }
-//        }
-
-//        if (alias.getAgentId() == 0) {
-//            result.addMessage("Alias must be attached to an Agent.", ResultType.INVALID);
-//        }
-
-//        boolean agentExists = agentRepository.findAll().stream()
-//                .anyMatch(agent -> agent.getAgentId() == alias.getAgentId());
-
-//        for (Agent agent : agentRepository.findAll()) {
-//            if (agent.getAgentId() == alias.getAgentId()) {
-//                agentExists = true;
-//                break;
-//            }
-//        }
-
-//        if (!agentExists) {
-//            result.addMessage("Agent associated with agent id does not exist.", ResultType.INVALID);
-//        }
-
         for (Alias a : aliasRepository.findAll()) {
             if (a.getName().equalsIgnoreCase(alias.getName())) {
                 if (Validations.isNullOrBlank(alias.getPersona())) {
